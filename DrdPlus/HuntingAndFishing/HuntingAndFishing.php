@@ -1,7 +1,9 @@
 <?php
 namespace DrdPlus\HuntingAndFishing;
 
-class HuntingAndFishing extends Str
+use Granam\Strict\Object\StrictObject;
+
+class HuntingAndFishing extends StrictObject
 {
 
 }

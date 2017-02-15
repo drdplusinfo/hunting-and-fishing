@@ -1,38 +1,7 @@
-# Keywords for [DrD+](http://www.altar.cz/drdplus/)
+# Catch from hunting and fishing for [DrD+](http://www.altar.cz/drdplus/)
 
-[![Build Status](https://travis-ci.org/jaroslavtyc/drd-plus-codes.svg?branch=master)](https://travis-ci.org/jaroslavtyc/drd-plus-codes)
-[![Test Coverage](https://codeclimate.com/github/jaroslavtyc/drd-plus-codes/badges/coverage.svg)](https://codeclimate.com/github/jaroslavtyc/drd-plus-codes/coverage)
-[![License](https://poser.pugx.org/drd-plus/codes/license)](https://packagist.org/packages/drd-plus/codes)
+[![Build Status](https://travis-ci.org/jaroslavtyc/drd-plus-hunting-and-fishing.svg?branch=master)](https://travis-ci.org/jaroslavtyc/drd-plus-hunting-and-fishing)
+[![Test Coverage](https://codeclimate.com/github/jaroslavtyc/drd-plus-hunting-and-fishing/badges/coverage.svg)](https://codeclimate.com/github/jaroslavtyc/drd-plus-hunting-and-fishing/coverage)
+[![License](https://poser.pugx.org/drd-plus/hunting-and-fishing/license)](https://packagist.org/packages/drd-plus/hunting-and-fishing)
 
-*Codes **MUST NOT** use a DrdPlus library*
-
-Codes defining standard for
-
- - armaments
-    - armors
-        - body armors
-        - helms
-        - shields
-    - projectiles
-        - arrows
-        - darts
-        - sling stones
-    - weapons
-        - ranged weapons
-        - melee weapons
- - combat actions
-    - generic combat actions
-    - ranged combat actions
-    - melee combat actions
- - skills
-    - combined
-    - physical
-    - psychical
- - genders
- - races
-    - sub-races
- - properties
- - professions
- - wounds and healing related codes
- - riding animals and riding movements
- - ...
+Have you catch something? Is it big? Is it edible? Why it talks? Why you eat it?

@@ -1,4 +1,4 @@
-# Catch from hunting and fishing for [DrD+](http://www.altar.cz/drdplus/)
+# Catch by hunting and fishing for [DrD+](http://www.altar.cz/drdplus/)
 
 [![Build Status](https://travis-ci.org/jaroslavtyc/drd-plus-hunting-and-fishing.svg?branch=master)](https://travis-ci.org/jaroslavtyc/drd-plus-hunting-and-fishing)
 [![Test Coverage](https://codeclimate.com/github/jaroslavtyc/drd-plus-hunting-and-fishing/badges/coverage.svg)](https://codeclimate.com/github/jaroslavtyc/drd-plus-hunting-and-fishing/coverage)

@@ -8,6 +8,7 @@ use DrdPlus\Tables\Measurements\Amount\Amount;
 use DrdPlus\Tables\Measurements\Amount\AmountBonus;
 use DrdPlus\Tables\Measurements\Time\Time;
 use DrdPlus\Tables\Measurements\Time\TimeBonus;
+use DrdPlus\Tables\Measurements\Time\TimeTable;
 use Granam\Integer\IntegerInterface;
 use Granam\Tests\Tools\TestWithMockery;
 
@@ -38,6 +39,7 @@ class CatchQualityTest extends TestWithMockery
         );
         self::assertInstanceOf(IntegerInterface::class, $catchQuality);
         self::assertSame($expectedCatchQuality, $catchQuality->getValue());
+        self::assertSame((string)$expectedCatchQuality, (string)$catchQuality);
     }
 
     public function provideValuesToGetCatchQuality()
@@ -104,5 +106,29 @@ class CatchQualityTest extends TestWithMockery
             ->andReturn($huntingTimeBonusValue);
 
         return $time;
+    }
+
+    /**
+     * @test
+     * @expectedException \DrdPlus\HuntingAndFishing\Exceptions\HuntingTimeIsTooShort
+     */
+    public function I_can_not_hunt_for_less_than_half_of_hour()
+    {
+        try {
+            new CatchQuality(
+                $this->createHuntPrerequisite(123),
+                $this->createRoll2d6DrdPlus(456),
+                $this->createRequiredAmountOfMealsInBonus(789),
+                new Time(27, Time::MINUTE, new TimeTable()) // results into bonus of 45
+            );
+        } catch (\Exception $exception) {
+            self::fail('No exception expected so far: ' . $exception->getTraceAsString());
+        }
+        new CatchQuality(
+            $this->createHuntPrerequisite(123),
+            $this->createRoll2d6DrdPlus(456),
+            $this->createRequiredAmountOfMealsInBonus(789),
+            new Time(26, Time::MINUTE, new TimeTable())
+        );
     }
 }

@@ -48,7 +48,7 @@ class CatchQuality extends StrictObject implements IntegerInterface
     private function getModifierByHuntingTime(Time $time): int
     {
         $timeBonusValue = $time->getBonus()->getValue();
-        if ($timeBonusValue < 45) { // 30 minutes
+        if ($timeBonusValue < 45 /* roughly 30 minutes */) {
             throw new Exceptions\HuntingTimeIsTooShort(
                 "You can not hunt for less than 30 minutes, got time for hunt only {$time}"
             );

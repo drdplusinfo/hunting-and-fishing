@@ -24,6 +24,7 @@ class HuntingAndFishingTest extends TestWithMockery
         );
         self::assertInstanceOf(IntegerInterface::class, $huntingAndFishing);
         self::assertSame(10 /* (13 + 6) / 2 */ + 156 + 237, $huntingAndFishing->getValue());
+        self::assertSame((string)(10 /* (13 + 6) / 2 */ + 156 + 237), (string)$huntingAndFishing);
     }
 
     /**

@@ -31,7 +31,7 @@ class HuntPrerequisite extends StrictObject implements IntegerInterface
     )
     {
         $this->value = SumAndRound::half($knack->getValue() + $senses->getValue())
-            + $huntingAndFishingSkillBonus->getValue() + $bonusFromDmForRolePlaying->getValue();
+            + $huntingAndFishingSkillBonus->getBonusFromSkill() + $bonusFromDmForRolePlaying->getValue();
     }
 
     /**

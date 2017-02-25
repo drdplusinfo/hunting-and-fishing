@@ -60,7 +60,7 @@ class HuntingAndFishingTest extends TestWithMockery
     private function createHuntingAndFishingSkillBonus(int $value)
     {
         $huntingAndFishingSkillBonus = $this->mockery(HuntingAndFishingSkillBonus::class);
-        $huntingAndFishingSkillBonus->shouldReceive('getValue')
+        $huntingAndFishingSkillBonus->shouldReceive('getBonusFromSkill')
             ->andReturn($value);
 
         return $huntingAndFishingSkillBonus;

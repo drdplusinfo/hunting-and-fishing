@@ -1,9 +1,10 @@
 <?php
 namespace DrdPlus\HuntingAndFishing;
 
-use Granam\Integer\PositiveInteger;
-
-interface HuntingAndFishingSkillBonus extends PositiveInteger
+interface HuntingAndFishingSkillBonus
 {
-
+    /**
+     * @return int
+     */
+    public function getBonusFromSkill(): int;
 }

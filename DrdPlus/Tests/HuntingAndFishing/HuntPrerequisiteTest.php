@@ -9,7 +9,7 @@ use DrdPlus\Properties\Derived\Senses;
 use Granam\Integer\IntegerInterface;
 use Granam\Tests\Tools\TestWithMockery;
 
-class HuntingAndFishingTest extends TestWithMockery
+class HuntPrerequisiteTest extends TestWithMockery
 {
     /**
      * @test

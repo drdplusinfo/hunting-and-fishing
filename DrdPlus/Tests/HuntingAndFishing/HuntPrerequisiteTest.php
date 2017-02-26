@@ -3,7 +3,7 @@ namespace DrdPlus\Tests\HuntingAndFishing;
 
 use DrdPlus\HuntingAndFishing\BonusFromDmForRolePlaying;
 use DrdPlus\HuntingAndFishing\HuntPrerequisite;
-use DrdPlus\HuntingAndFishing\HuntingAndFishingSkillBonus;
+use DrdPlus\HuntingAndFishing\WithBonusFromHuntingAndFishingSkill;
 use DrdPlus\Properties\Base\Knack;
 use DrdPlus\Properties\Derived\Senses;
 use Granam\Integer\IntegerInterface;
@@ -55,11 +55,11 @@ class HuntPrerequisiteTest extends TestWithMockery
 
     /**
      * @param int $value
-     * @return \Mockery\MockInterface|HuntingAndFishingSkillBonus
+     * @return \Mockery\MockInterface|WithBonusFromHuntingAndFishingSkill
      */
     private function createHuntingAndFishingSkillBonus(int $value)
     {
-        $huntingAndFishingSkillBonus = $this->mockery(HuntingAndFishingSkillBonus::class);
+        $huntingAndFishingSkillBonus = $this->mockery(WithBonusFromHuntingAndFishingSkill::class);
         $huntingAndFishingSkillBonus->shouldReceive('getBonusFromSkill')
             ->andReturn($value);
 

@@ -20,13 +20,13 @@ class HuntPrerequisite extends StrictObject implements IntegerInterface
     /**
      * @param Knack $knack
      * @param Senses $senses
-     * @param HuntingAndFishingSkillBonus $huntingAndFishingSkillBonus
+     * @param WithBonusFromHuntingAndFishingSkill $huntingAndFishingSkillBonus
      * @param BonusFromDmForRolePlaying $bonusFromDmForRolePlaying
      */
     public function __construct(
         Knack $knack,
         Senses $senses,
-        HuntingAndFishingSkillBonus $huntingAndFishingSkillBonus,
+        WithBonusFromHuntingAndFishingSkill $huntingAndFishingSkillBonus,
         BonusFromDmForRolePlaying $bonusFromDmForRolePlaying
     )
     {

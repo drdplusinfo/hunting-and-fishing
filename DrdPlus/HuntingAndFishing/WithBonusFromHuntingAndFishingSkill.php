@@ -1,7 +1,7 @@
 <?php
 namespace DrdPlus\HuntingAndFishing;
 
-interface HuntingAndFishingSkillBonus
+interface WithBonusFromHuntingAndFishingSkill
 {
     /**
      * @return int

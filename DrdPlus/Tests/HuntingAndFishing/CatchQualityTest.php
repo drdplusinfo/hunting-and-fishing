@@ -2,7 +2,7 @@
 namespace DrdPlus\Tests\HuntingAndFishing;
 
 use Drd\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
-use DrdPlus\Codes\TimeCode;
+use DrdPlus\Codes\TimeUnitCode;
 use DrdPlus\HuntingAndFishing\CatchQuality;
 use DrdPlus\HuntingAndFishing\HuntPrerequisite;
 use DrdPlus\Tables\Measurements\Amount\Amount;
@@ -120,7 +120,7 @@ class CatchQualityTest extends TestWithMockery
                 $this->createHuntPrerequisite(123),
                 $this->createRoll2d6DrdPlus(456),
                 $this->createRequiredAmountOfMealsInBonus(789),
-                new Time(27, TimeCode::MINUTE, new TimeTable()) // results into bonus of 45
+                new Time(27, TimeUnitCode::MINUTE, new TimeTable()) // results into bonus of 45
             );
         } catch (\Exception $exception) {
             self::fail('No exception expected so far: ' . $exception->getTraceAsString());
@@ -129,7 +129,7 @@ class CatchQualityTest extends TestWithMockery
             $this->createHuntPrerequisite(123),
             $this->createRoll2d6DrdPlus(456),
             $this->createRequiredAmountOfMealsInBonus(789),
-            new Time(26, TimeCode::MINUTE, new TimeTable())
+            new Time(26, TimeUnitCode::MINUTE, new TimeTable())
         );
     }
 }

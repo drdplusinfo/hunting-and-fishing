@@ -3,19 +3,15 @@ namespace DrdPlus\HuntingAndFishing;
 
 use Drd\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\Calculations\SumAndRound;
+use DrdPlus\RollsOn\QualityAndSuccess\RollOnQuality;
 use DrdPlus\Tables\Measurements\Amount\Amount;
 use DrdPlus\Tables\Measurements\Time\Time;
-use Granam\Integer\IntegerInterface;
-use Granam\Strict\Object\StrictObject;
 
 /**
  * See PPH page 132, @link https://pph.drdplus.jaroslavtyc.com/#lov_a_rybolov
  */
-class CatchQuality extends StrictObject implements IntegerInterface
+class CatchQuality extends RollOnQuality
 {
-    /** @var int */
-    private $value;
-
     /**
      * @param HuntPrerequisite $huntPrerequisite
      * @param Roll2d6DrdPlus $roll2D6DrdPlus
@@ -30,11 +26,12 @@ class CatchQuality extends StrictObject implements IntegerInterface
         Time $huntingTime
     )
     {
-        $this->value = SumAndRound::round(
+        parent::__construct(
             $huntPrerequisite->getValue()
-            - ($requiredAmountOfMeals->getBonus()->getValue() / 2)
-            + $roll2D6DrdPlus->getValue()
-            + $this->getModifierByHuntingTime($huntingTime)
+            // workaround to impossible round on whole result (which would round 9 - 10.5 - 0 + 13 to 12, but without roll of 12 simple round would result into 11 ...)
+            - SumAndRound::floor($requiredAmountOfMeals->getBonus()->getValue() / 2)
+            + $this->getModifierByHuntingTime($huntingTime),
+            $roll2D6DrdPlus
         );
     }
 
@@ -56,21 +53,4 @@ class CatchQuality extends StrictObject implements IntegerInterface
 
         return $timeBonusValue - self::STANDARD_HUNTING_TIME_IN_BONUS;
     }
-
-    /**
-     * @return int
-     */
-    public function getValue(): int
-    {
-        return $this->value;
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString(): string
-    {
-        return (string)$this->getValue();
-    }
-
 }

@@ -5,12 +5,12 @@ use Drd\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\Codes\TimeUnitCode;
 use DrdPlus\HuntingAndFishing\CatchQuality;
 use DrdPlus\HuntingAndFishing\HuntPrerequisite;
+use DrdPlus\RollsOn\QualityAndSuccess\RollOnQuality;
 use DrdPlus\Tables\Measurements\Amount\Amount;
 use DrdPlus\Tables\Measurements\Amount\AmountBonus;
 use DrdPlus\Tables\Measurements\Time\Time;
 use DrdPlus\Tables\Measurements\Time\TimeBonus;
 use DrdPlus\Tables\Measurements\Time\TimeTable;
-use Granam\Integer\IntegerInterface;
 use Granam\Tests\Tools\TestWithMockery;
 
 class CatchQualityTest extends TestWithMockery
@@ -38,12 +38,12 @@ class CatchQualityTest extends TestWithMockery
             $this->createRequiredAmountOfMealsInBonus($requiredAmountOfMealsValue),
             $this->createHuntingTimeInBonus($huntingTimeInBonus)
         );
-        self::assertInstanceOf(IntegerInterface::class, $catchQuality);
+        self::assertInstanceOf(RollOnQuality::class, $catchQuality);
         self::assertSame($expectedCatchQuality, $catchQuality->getValue());
         self::assertSame((string)$expectedCatchQuality, (string)$catchQuality);
     }
 
-    public function provideValuesToGetCatchQuality()
+    public function provideValuesToGetCatchQuality(): array
     {
         // required hunt prerequisite, roll, amount of meals as amount bonus, hunting time as time bonus, expected catch quality
         return [

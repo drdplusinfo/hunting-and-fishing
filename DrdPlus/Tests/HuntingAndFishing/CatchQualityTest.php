@@ -2,7 +2,7 @@
 namespace DrdPlus\Tests\HuntingAndFishing;
 
 use Drd\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
-use DrdPlus\Codes\TimeUnitCode;
+use DrdPlus\Codes\Units\TimeUnitCode;
 use DrdPlus\HuntingAndFishing\CatchQuality;
 use DrdPlus\HuntingAndFishing\HuntPrerequisite;
 use DrdPlus\RollsOn\QualityAndSuccess\RollOnQuality;

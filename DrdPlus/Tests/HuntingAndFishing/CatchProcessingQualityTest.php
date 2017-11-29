@@ -1,7 +1,7 @@
 <?php
 namespace DrdPlus\Tests\HuntingAndFishing;
 
-use Drd\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
+use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\HuntingAndFishing\CatchProcessingQuality;
 use DrdPlus\HuntingAndFishing\Cooking;
 use DrdPlus\Properties\Base\Knack;

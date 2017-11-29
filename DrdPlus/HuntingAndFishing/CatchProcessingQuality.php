@@ -1,7 +1,7 @@
 <?php
 namespace DrdPlus\HuntingAndFishing;
 
-use Drd\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
+use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\Properties\Base\Knack;
 use DrdPlus\RollsOn\QualityAndSuccess\RollOnQuality;
 

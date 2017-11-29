@@ -1,7 +1,7 @@
 <?php
 namespace DrdPlus\Tests\HuntingAndFishing;
 
-use Drd\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
+use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\Codes\Units\TimeUnitCode;
 use DrdPlus\HuntingAndFishing\CatchQuality;
 use DrdPlus\HuntingAndFishing\HuntPrerequisite;

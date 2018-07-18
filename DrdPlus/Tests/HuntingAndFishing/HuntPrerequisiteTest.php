@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace DrdPlus\Tests\HuntingAndFishing;
 
 use DrdPlus\HuntingAndFishing\BonusFromDmForRolePlaying;
@@ -14,7 +16,7 @@ class HuntPrerequisiteTest extends TestWithMockery
     /**
      * @test
      */
-    public function I_can_get_hunt_prerequisite()
+    public function I_can_get_hunt_prerequisite(): void
     {
         $huntingAndFishing = new HuntPrerequisite(
             $this->createKnack(13),
@@ -31,7 +33,7 @@ class HuntPrerequisiteTest extends TestWithMockery
      * @param int $value
      * @return \Mockery\MockInterface|Knack
      */
-    private function createKnack(int $value)
+    private function createKnack(int $value): Knack
     {
         $knack = $this->mockery(Knack::class);
         $knack->shouldReceive('getValue')
@@ -44,7 +46,7 @@ class HuntPrerequisiteTest extends TestWithMockery
      * @param int $value
      * @return \Mockery\MockInterface|Senses
      */
-    private function createSenses(int $value)
+    private function createSenses(int $value): Senses
     {
         $senses = $this->mockery(Senses::class);
         $senses->shouldReceive('getValue')
@@ -57,7 +59,7 @@ class HuntPrerequisiteTest extends TestWithMockery
      * @param int $value
      * @return \Mockery\MockInterface|WithBonusFromHuntingAndFishingSkill
      */
-    private function createHuntingAndFishingSkillBonus(int $value)
+    private function createHuntingAndFishingSkillBonus(int $value): WithBonusFromHuntingAndFishingSkill
     {
         $huntingAndFishingSkillBonus = $this->mockery(WithBonusFromHuntingAndFishingSkill::class);
         $huntingAndFishingSkillBonus->shouldReceive('getBonusFromSkill')
@@ -70,7 +72,7 @@ class HuntPrerequisiteTest extends TestWithMockery
      * @param int $value
      * @return \Mockery\MockInterface|BonusFromDmForRolePlaying
      */
-    private function createBonusFromDmForRolePlaying(int $value)
+    private function createBonusFromDmForRolePlaying(int $value): BonusFromDmForRolePlaying
     {
         $bonusFromDmForRolePlaying = $this->mockery(BonusFromDmForRolePlaying::class);
         $bonusFromDmForRolePlaying->shouldReceive('getValue')

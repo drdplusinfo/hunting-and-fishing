@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace DrdPlus\Tests\HuntingAndFishing;
 
 use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
@@ -12,7 +14,7 @@ class CatchProcessingQualityTest extends TestWithMockery
     /**
      * @test
      */
-    public function I_can_use_it()
+    public function I_can_use_it(): void
     {
         $sut = new CatchProcessingQuality(
             $this->createKnack(123),
@@ -65,8 +67,9 @@ class CatchProcessingQualityTest extends TestWithMockery
 
     /**
      * @test
+     * @throws \ReflectionException
      */
-    public function I_get_whispered_proper_roll_class_by_ide()
+    public function I_get_whispered_proper_roll_class_by_ide(): void
     {
         $reflection = new \ReflectionClass(self::getSutClass());
         self::assertContains(<<<'COMMENT'

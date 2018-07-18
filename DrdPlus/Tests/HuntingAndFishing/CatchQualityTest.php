@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace DrdPlus\Tests\HuntingAndFishing;
 
 use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
@@ -30,7 +32,7 @@ class CatchQualityTest extends TestWithMockery
         int $requiredAmountOfMealsValue,
         int $huntingTimeInBonus,
         int $expectedCatchQuality
-    )
+    ): void
     {
         $catchQuality = new CatchQuality(
             $this->createHuntPrerequisite($givenHuntPrerequisite),
@@ -57,7 +59,7 @@ class CatchQualityTest extends TestWithMockery
      * @param int $value
      * @return \Mockery\MockInterface|HuntPrerequisite
      */
-    private function createHuntPrerequisite(int $value)
+    private function createHuntPrerequisite(int $value): HuntPrerequisite
     {
         $huntPrerequisite = $this->mockery(HuntPrerequisite::class);
         $huntPrerequisite->shouldReceive('getValue')
@@ -70,7 +72,7 @@ class CatchQualityTest extends TestWithMockery
      * @param int $value
      * @return \Mockery\MockInterface|Roll2d6DrdPlus
      */
-    private function createRoll2d6DrdPlus(int $value)
+    private function createRoll2d6DrdPlus(int $value): Roll2d6DrdPlus
     {
         $roll2d6DrdPlus = $this->mockery(Roll2d6DrdPlus::class);
         $roll2d6DrdPlus->shouldReceive('getValue')
@@ -83,7 +85,7 @@ class CatchQualityTest extends TestWithMockery
      * @param int $amountBonusValue
      * @return \Mockery\MockInterface|Amount
      */
-    private function createRequiredAmountOfMealsInBonus(int $amountBonusValue)
+    private function createRequiredAmountOfMealsInBonus(int $amountBonusValue): Amount
     {
         $amountOfMeals = $this->mockery(Amount::class);
         $amountOfMeals->shouldReceive('getBonus')
@@ -98,7 +100,7 @@ class CatchQualityTest extends TestWithMockery
      * @param int $huntingTimeBonusValue
      * @return \Mockery\MockInterface|Time
      */
-    private function createHuntingTimeInBonus(int $huntingTimeBonusValue)
+    private function createHuntingTimeInBonus(int $huntingTimeBonusValue): Time
     {
         $time = $this->mockery(Time::class);
         $time->shouldReceive('getBonus')
@@ -113,7 +115,7 @@ class CatchQualityTest extends TestWithMockery
      * @test
      * @expectedException \DrdPlus\HuntingAndFishing\Exceptions\HuntingTimeIsTooShort
      */
-    public function I_can_not_hunt_for_less_than_half_of_hour()
+    public function I_can_not_hunt_for_less_than_half_of_hour(): void
     {
         try {
             new CatchQuality(

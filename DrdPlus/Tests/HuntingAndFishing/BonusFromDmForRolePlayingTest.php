@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace DrdPlus\Tests\HuntingAndFishing;
 
 use DrdPlus\HuntingAndFishing\BonusFromDmForRolePlaying;
@@ -12,7 +14,7 @@ class BonusFromDmForRolePlayingTest extends TestWithMockery
      * @dataProvider providePossibleValuesForBonus
      * @param int $value
      */
-    public function I_can_use_it(int $value)
+    public function I_can_use_it(int $value): void
     {
         $bonusFromDmForRolePlaying = new BonusFromDmForRolePlaying($value);
         self::assertInstanceOf(PositiveInteger::class, $bonusFromDmForRolePlaying);
@@ -20,7 +22,7 @@ class BonusFromDmForRolePlayingTest extends TestWithMockery
         self::assertSame((string)$value, (string)$bonusFromDmForRolePlaying->getValue());
     }
 
-    public function providePossibleValuesForBonus()
+    public function providePossibleValuesForBonus(): array
     {
         return [
             [0],
@@ -35,7 +37,7 @@ class BonusFromDmForRolePlayingTest extends TestWithMockery
      * @expectedException \DrdPlus\HuntingAndFishing\Exceptions\BonusFromDmIsTooHigh
      * @expectedExceptionMessageRegExp ~4~
      */
-    public function I_can_not_create_too_high_bonus()
+    public function I_can_not_create_too_high_bonus(): void
     {
         new BonusFromDmForRolePlaying(4);
     }

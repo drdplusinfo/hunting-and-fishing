@@ -1,11 +1,13 @@
 <?php
+declare(strict_types=1);
+
 namespace DrdPlus\HuntingAndFishing;
 
 use Granam\Integer\PositiveIntegerObject;
 
 class BonusFromDmForRolePlaying extends PositiveIntegerObject
 {
-    const MAXIMAL_BONUS_FROM_DM = 3;
+    public const MAXIMAL_BONUS_FROM_DM = 3;
 
     /**
      * @param mixed $value

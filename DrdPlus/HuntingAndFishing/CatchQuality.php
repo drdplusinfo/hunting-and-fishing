@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace DrdPlus\HuntingAndFishing;
 
 use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
@@ -12,6 +14,8 @@ use DrdPlus\Tables\Measurements\Time\Time;
  */
 class CatchQuality extends RollOnQuality
 {
+    public const STANDARD_HUNTING_TIME_IN_BONUS = 57; // 2 hours
+
     /**
      * @param HuntPrerequisite $huntPrerequisite
      * @param Roll2d6DrdPlus $roll2D6DrdPlus
@@ -34,8 +38,6 @@ class CatchQuality extends RollOnQuality
             $roll2D6DrdPlus
         );
     }
-
-    const STANDARD_HUNTING_TIME_IN_BONUS = 57; // 2 hours
 
     /**
      * @param Time $time

@@ -1,5 +1,5 @@
 {
-  "name": "drd-plus/hunting-and-fishing",
+  "name": "drdplus/hunting-and-fishing",
   "license": "MIT",
   "type": "project",
   "description": "Catch from hunting and fishing for Drd+",
@@ -11,8 +11,8 @@
   "require": {
     "php": ">=7.1",
     "granam/strict-object": "^3.0",
-    "drd-plus/tables": "^1.0",
-    "drd-plus/rolls-on": "^1.0"
+    "drdplus/tables": "^1.0",
+    "drdplus/rolls-on": "^1.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",

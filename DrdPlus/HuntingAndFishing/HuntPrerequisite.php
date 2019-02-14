@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace DrdPlus\HuntingAndFishing;
 
@@ -36,9 +36,6 @@ class HuntPrerequisite extends StrictObject implements IntegerInterface
             + $huntingAndFishingSkillBonus->getBonusFromSkill() + $bonusFromDmForRolePlaying->getValue();
     }
 
-    /**
-     * @return int
-     */
     public function getValue(): int
     {
         return $this->value;

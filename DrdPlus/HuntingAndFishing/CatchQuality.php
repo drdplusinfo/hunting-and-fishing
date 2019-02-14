@@ -52,7 +52,6 @@ class CatchQuality extends RollOnQuality
                 "You can not hunt for less than 30 minutes, got time for hunt only {$time}"
             );
         }
-
         return $timeBonusValue - self::STANDARD_HUNTING_TIME_IN_BONUS;
     }
 }

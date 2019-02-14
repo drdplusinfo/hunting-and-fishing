@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace DrdPlus\Tests\HuntingAndFishing;
 
-use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
+use Granam\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\Codes\Units\TimeUnitCode;
 use DrdPlus\HuntingAndFishing\CatchQuality;
 use DrdPlus\HuntingAndFishing\HuntPrerequisite;

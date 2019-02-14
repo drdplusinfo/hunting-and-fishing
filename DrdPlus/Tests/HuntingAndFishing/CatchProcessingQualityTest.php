@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace DrdPlus\Tests\HuntingAndFishing;
 
-use DrdPlus\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
+use Granam\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\HuntingAndFishing\CatchProcessingQuality;
 use DrdPlus\HuntingAndFishing\Cooking;
-use DrdPlus\Properties\Base\Knack;
+use DrdPlus\BaseProperties\Knack;
 use Granam\Tests\Tools\TestWithMockery;
 
 class CatchProcessingQualityTest extends TestWithMockery

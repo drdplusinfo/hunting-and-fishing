@@ -6,7 +6,7 @@ namespace DrdPlus\Tests\HuntingAndFishing;
 use DrdPlus\HuntingAndFishing\BonusFromDmForRolePlaying;
 use DrdPlus\HuntingAndFishing\HuntPrerequisite;
 use DrdPlus\HuntingAndFishing\WithBonusFromHuntingAndFishingSkill;
-use DrdPlus\Properties\Base\Knack;
+use DrdPlus\BaseProperties\Knack;
 use DrdPlus\Properties\Derived\Senses;
 use Granam\Integer\IntegerInterface;
 use Granam\Tests\Tools\TestWithMockery;

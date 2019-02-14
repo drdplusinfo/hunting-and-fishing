@@ -4,7 +4,7 @@ declare(strict_types = 1);
 namespace DrdPlus\HuntingAndFishing;
 
 use DrdPlus\Calculations\SumAndRound;
-use DrdPlus\Properties\Base\Knack;
+use DrdPlus\BaseProperties\Knack;
 use DrdPlus\Properties\Derived\Senses;
 use Granam\Integer\IntegerInterface;
 use Granam\Strict\Object\StrictObject;

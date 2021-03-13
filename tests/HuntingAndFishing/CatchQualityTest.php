@@ -12,7 +12,7 @@ use DrdPlus\Tables\Measurements\Amount\AmountBonus;
 use DrdPlus\Tables\Measurements\Time\Time;
 use DrdPlus\Tables\Measurements\Time\TimeBonus;
 use DrdPlus\Tables\Measurements\Time\TimeTable;
-use Granam\Tests\Tools\TestWithMockery;
+use Granam\TestWithMockery\TestWithMockery;
 
 class CatchQualityTest extends TestWithMockery
 {

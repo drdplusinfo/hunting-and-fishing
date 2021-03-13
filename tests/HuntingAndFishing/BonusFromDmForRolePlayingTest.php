@@ -4,7 +4,7 @@ namespace DrdPlus\Tests\HuntingAndFishing;
 
 use DrdPlus\HuntingAndFishing\BonusFromDmForRolePlaying;
 use Granam\Integer\PositiveInteger;
-use Granam\Tests\Tools\TestWithMockery;
+use Granam\TestWithMockery\TestWithMockery;
 
 class BonusFromDmForRolePlayingTest extends TestWithMockery
 {
@@ -37,7 +37,7 @@ class BonusFromDmForRolePlayingTest extends TestWithMockery
     public function I_can_not_create_too_high_bonus(): void
     {
         $this->expectException(\DrdPlus\HuntingAndFishing\Exceptions\BonusFromDmIsTooHigh::class);
-        $this->expectExceptionMessageRegExp('~4~');
+        $this->expectExceptionMessageMatches('~4~');
         new BonusFromDmForRolePlaying(4);
     }
 }

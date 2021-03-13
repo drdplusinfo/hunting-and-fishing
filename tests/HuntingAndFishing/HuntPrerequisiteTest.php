@@ -8,7 +8,7 @@ use DrdPlus\HuntingAndFishing\WithBonusFromHuntingAndFishingSkill;
 use DrdPlus\BaseProperties\Knack;
 use DrdPlus\Properties\Derived\Senses;
 use Granam\Integer\IntegerInterface;
-use Granam\Tests\Tools\TestWithMockery;
+use Granam\TestWithMockery\TestWithMockery;
 
 class HuntPrerequisiteTest extends TestWithMockery
 {

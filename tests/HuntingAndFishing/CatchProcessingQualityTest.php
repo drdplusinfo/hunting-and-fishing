@@ -6,7 +6,7 @@ use Granam\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
 use DrdPlus\HuntingAndFishing\CatchProcessingQuality;
 use DrdPlus\HuntingAndFishing\Cooking;
 use DrdPlus\BaseProperties\Knack;
-use Granam\Tests\Tools\TestWithMockery;
+use Granam\TestWithMockery\TestWithMockery;
 
 class CatchProcessingQualityTest extends TestWithMockery
 {
@@ -76,7 +76,7 @@ class CatchProcessingQualityTest extends TestWithMockery
 COMMENT
             , $reflection->getDocComment()
         );
-        self::assertRegExp(<<<'REGEXP'
+        self::assertMatchesRegularExpression(<<<'REGEXP'
 ~\* See PPH page \d+ (left( column)?( (top|bottom))?|right( column)?( (top|bottom))?)?, @link https://pph\.drdplus\.info/#[a-z_]+~
 REGEXP
             , $reflection->getDocComment(),

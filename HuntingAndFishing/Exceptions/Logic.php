@@ -1,10 +1,8 @@
 <?php declare(strict_types=1);
 
-declare(strict_types=1);
-
 namespace DrdPlus\HuntingAndFishing\Exceptions;
 
-interface Exception
+interface Logic extends Exception
 {
 
 }

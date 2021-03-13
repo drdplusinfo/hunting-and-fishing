@@ -1,7 +1,5 @@
 <?php declare(strict_types=1);
 
-declare(strict_types=1);
-
 namespace DrdPlus\HuntingAndFishing;
 
 use Granam\DiceRolls\Templates\Rolls\Roll2d6DrdPlus;
